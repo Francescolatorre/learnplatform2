@@ -80,7 +80,7 @@ def test_login(username, password):
 def check_health():
     """Test the health endpoint"""
     print("\nChecking server health endpoint...")
-    response = test_endpoint("http://localhost:8000/health/")
+    response = _test_endpoint("http://localhost:8000/health/")
     if response:
         try:
             result = json.loads(response)
@@ -94,7 +94,7 @@ def check_health():
 def check_api_root():
     """Test the API root to discover available endpoints"""
     print("\nChecking API root...")
-    response = test_endpoint("http://localhost:8000/api/v1/")
+    response = _test_endpoint("http://localhost:8000/api/v1/")
     if response:
         try:
             result = json.loads(response)
