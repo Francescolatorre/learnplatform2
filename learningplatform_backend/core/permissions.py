@@ -3,7 +3,7 @@ import logging  # Add logging import
 from rest_framework.permissions import BasePermission
 
 from .models import \
-    CourseEnrollment  # Replace 'your_app' with the actual app name
+    CourseEnrollment
 
 # Configure logger for this module
 logger = logging.getLogger(__name__)
